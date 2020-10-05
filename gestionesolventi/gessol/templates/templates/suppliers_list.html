@@ -51,7 +51,7 @@
 
 
       <!-- </div> -->
-    </div>
+    <!-- </div>
       <div style="margin-left:10%; padding:40px 16px;height:1000px;">
         <h2>Fixed Full-height Side Nav</h2>
         <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
@@ -64,6 +64,21 @@
         <p>Some text..</p>
         <p>Some text..</p>
         <p>Some text..</p>
+      </div> -->
+    </div>
+      <div style="margin-left:10%; padding:50px 16px;height:1000px;">
+        <h1>Suppliers List</h1>
+        {% if suppliers_list %}
+        <ul>
+          {% for supplier in suppliers_list %}
+            <li>
+              <a>{{ suppliers.company_name }}</a> ({{suppliers.address}})
+            </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+          <p>There are no books in the library.</p>
+        {% endif %}
       </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

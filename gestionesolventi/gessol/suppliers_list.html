@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Suppliers List</h1>
+  {% if suppliers_list %}
+  <ul>
+    {% for supplier in suppliers_list %}
+      <li>
+        <a>{{ suppliers.company_name }}</a> ({{suppliers.address}})
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no books in the library.</p>
+  {% endif %}
+{% endblock %}
